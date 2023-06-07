@@ -1,0 +1,114 @@
+@font-face {
+  font-family: Nohemi;
+  font-display: block;
+  src: url(./fonts/Nohemi-VF.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nohemi';
+  font-style: normal;
+}
+
+body {
+  background-color: hsla(65, 100%, 49%, 1);
+  padding: 96px 48px;
+  overflow-x: hidden;
+}
+
+.logo {
+  width: calc(100vw + 144px);
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 96px 0;
+  flex-wrap: wrap;
+}
+
+.wrapper > *:nth-child(1) {
+  width: calc(100% / 3 * 2);
+}
+.wrapper > *:nth-child(2) {
+  width: calc(100% / 3 * 1);
+}
+
+p {
+  font-weight: 300;
+  font-size: 41px;
+  line-height: 56px;
+  color: hsla(30, 4%, 4%, 1);
+ }
+
+a {
+  font-weight: 900;
+  font-size: 41px;
+  line-height: 40px;
+  color: hsla(30, 4%, 4%, 1);
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/* TICKER */
+
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(-20%, 0, 0);
+    transform: translate3d(-20%, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.ticker-wrap {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-left: 100%;
+  box-sizing: content-box;
+}
+.ticker-wrap .ticker {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  box-sizing: content-box;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-duration: 50s;
+  animation-duration: 50s;
+}
+.ticker-wrap .ticker__item {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1024px) {
+
+  body {
+    padding: 48px;
+  }
+
+  .wrapper > *:nth-child(1), .wrapper > *:nth-child(2) {
+    width: 100%;
+  }
+  .wrapper > *:nth-child(2) {
+    justify-content: flex-start;
+    margin-top: 48px;
+  }
+
+}
