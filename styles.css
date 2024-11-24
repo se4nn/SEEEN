@@ -13,7 +13,7 @@
 
 body {
   background-color: hsla(65, 100%, 49%, 1);
-  padding: 96px 48px;
+  padding: 48px 48px;
   overflow-x: hidden;
 }
 
@@ -26,7 +26,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 96px 0;
   flex-wrap: wrap;
 }
 
@@ -37,11 +36,58 @@ body {
   width: calc(100% / 3 * 1);
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.gap-48 {
+  gap: 48px;
+}
+
+.gap-16 {
+  gap: 16px;
+}
+
+.padding-96 {
+  padding: 96px 0;
+}
+
+.padding-48 {
+  padding: 48px 0;
+}
+
+.columns-3 {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 121px;
+  line-height: 120px;
+  color: hsla(30, 4%, 4%, 1);
+  max-width: 880px;
+  text-transform: uppercase;
+  margin-bottom: -16px;
+}
+
 p {
   font-weight: 300;
   font-size: 41px;
   line-height: 56px;
   color: hsla(30, 4%, 4%, 1);
+  max-width: 880px;
+ }
+
+ p.small {
+  font-size: 23px;
+  line-height: 32px;
  }
 
 a {
@@ -52,6 +98,58 @@ a {
   text-decoration: none;
   display: flex;
   justify-content: flex-end;
+}
+
+.button {
+  padding: 26px 40px 14px 32px;
+  border-radius: 16px;
+  background: hsla(30, 4%, 4%, 1);
+  color: hsla(65, 100%, 49%, 1);
+  font-size: 82px;
+  line-height: 80px;
+}
+
+.art-collection {
+  display: flex;
+  padding-left: 48px;
+  margin: 0 -48px;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: art;
+  animation-name: art;
+  -webkit-animation-duration: 40s;
+  animation-duration: 40s;
+}
+
+.art {
+  width: auto;
+  max-height: 480px;
+  height: auto;
+}
+
+.align-center {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+}
+
+@keyframes art {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
 }
 
 
@@ -70,8 +168,6 @@ a {
 }
 
 .ticker-wrap {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   padding-left: 100%;
   box-sizing: content-box;
