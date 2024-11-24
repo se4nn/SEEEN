@@ -215,4 +215,70 @@ a {
     padding: 24px;
   }
 
+  .wrapper > *:nth-child(2) {
+    justify-content: flex-start;
+    margin-top: 16px;
+  }
+
+  .gap-48 {
+    gap: 24px;
+  }
+  
+  .gap-16 {
+    gap: 8px;
+  }
+  
+  .padding-96 {
+    padding: 48px 0;
+  }
+  
+  .padding-48 {
+    padding: 24px 0;
+  }
+
+  h2 {
+    font-size: 65px;
+    line-height: 64px;
+    max-width: 100%px;
+    margin-bottom: -8px;
+  }
+  
+  p {
+    font-size: 21px;
+    line-height: 24px;
+    max-width: 100%;
+   }
+  
+   p.small {
+    font-size: 17px;
+    line-height: 24px;
+   }
+  
+  a {
+    font-size: 21px;
+    line-height: 24px;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .button {
+    padding: 13px 20px 7px 16px;
+    border-radius: 8px;
+    font-size: 41px;
+    line-height: 40px;
+  }
+
+  .art {
+    max-height: 320px;
+  }
+
+  .columns-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
 }
