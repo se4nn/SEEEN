@@ -104,12 +104,10 @@ a {
 }
 
 .button {
-  padding: 26px 40px 14px 32px;
-  border-radius: 16px;
+  padding: 13px 20px 7px 16px;
+  border-radius: 8px;
   background: hsla(30, 4%, 4%, 1);
   color: hsla(65, 100%, 49%, 1);
-  font-size: 82px;
-  line-height: 80px;
 }
 
 .art-collection {
@@ -265,13 +263,6 @@ a {
     text-decoration: none;
     display: flex;
     justify-content: flex-end;
-  }
-  
-  .button {
-    padding: 13px 20px 7px 16px;
-    border-radius: 8px;
-    font-size: 41px;
-    line-height: 40px;
   }
 
   .art {
