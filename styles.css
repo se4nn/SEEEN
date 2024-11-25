@@ -97,6 +97,9 @@ a {
   color: hsla(30, 4%, 4%, 1);
   text-decoration: none;
   display: flex;
+}
+
+.wrapper a {
   justify-content: flex-end;
 }
 
@@ -171,6 +174,8 @@ a {
   width: 100%;
   padding-left: 100%;
   box-sizing: content-box;
+  overflow: hidden;
+  margin-left: -48px;
 }
 .ticker-wrap .ticker {
   display: inline-block;
@@ -279,6 +284,10 @@ a {
 
   .row {
     flex-direction: column;
+  }
+
+  .ticker-wrap {
+    margin-left: -24px;
   }
 
 }
